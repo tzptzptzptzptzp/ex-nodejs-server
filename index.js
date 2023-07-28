@@ -1,4 +1,6 @@
 const http = require("http");
+const html_index = require("fs").readFileSync("./index.html");
+const html_404 = require("fs").readFileSync("./404.html");
 
 // ポート番号の定義
 const PORT = 8000;
@@ -11,7 +13,7 @@ const server = http.createServer((req, res) => {
       "Content-Type": "text/html",
     });
     // 返却するコンテンツを設定
-    res.write("<h1>Hello World</h1>");
+    res.write(html_index);
     // レスポンスの送信を完了
     res.end();
   } else {
@@ -20,7 +22,7 @@ const server = http.createServer((req, res) => {
       "Content-Type": "text/html",
     });
     // 返却するコンテンツを設定
-    res.write("<h1>404 Not Found</h1>");
+    res.write(html_404);
     // レスポンスの送信を完了
     res.end();
   }
