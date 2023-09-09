@@ -16,3 +16,23 @@ npm を使用しています
 npm
 npm start // サーバー起動
 ```
+
+---
+
+## Introduction
+
+This is a simple server created using Node.js.  
+It is configured to return a "404 Not Found" response for any path other than the root path and serves HTML files.
+
+## Technologies Used
+
+- [Node.js](https://nodejs.org/)
+
+## Development Procedure
+
+We utilize npm for development:
+
+```bash
+npm
+npm start // Start the Server
+```
